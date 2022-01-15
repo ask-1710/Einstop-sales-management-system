@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Sales Management Software",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "client": "cd frontend && npm start",
+    "server": "nodemon",
+    "build": "cd frontend && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
+    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "engines": {
+    "node": "14.18.0"
+  },
+  "keywords": ["heroku"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongodb": "^4.2.2"
+  }
+}
