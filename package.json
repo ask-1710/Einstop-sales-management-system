@@ -16,7 +16,9 @@
   "engines": {
     "node": "14.18.0"
   },
-  "keywords": ["heroku"],
+  "keywords": [
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
