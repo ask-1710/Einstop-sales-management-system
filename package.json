@@ -6,12 +6,12 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon",
+    "start": "node index.js",
     "client": "cd frontend && npm start",
-    "server": "nodemon",
+    "server": "node index.js",
     "build": "cd frontend && npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
-    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
   },
   "engines": {
     "node": "14.18.0"
